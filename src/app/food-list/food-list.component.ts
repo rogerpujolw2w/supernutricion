@@ -12,6 +12,12 @@ export class FoodListComponent implements OnInit {
 
   public alimentos:Array<any>;
 
+  Today = []
+
+  clickAdd(alimento:any,can:string) {
+      this.Today.push({name : alimento.name, can : can })
+  }
+
   constructor(
   ) {
     this.alimentos=foods;

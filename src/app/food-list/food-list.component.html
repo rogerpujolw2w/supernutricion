@@ -1,28 +1,24 @@
+<div class="container-fluid" >
 <div class="row">
-  <div class="col-md-12">
-
-
-    <ng-template #nocoment><p [ngStyle]="{'color': 'red'}">Nothing</p></ng-template>
+  <div class="col-md-6">
 
     <ul>
       <li *ngFor="let alimento of alimentos" class="mb-2">
         <div>
             <img src="{{alimento.image}}" width="100px">
-            <button>+</button><input type="text">
+            <button (click) = 'clickAdd(alimento,1)' >+</button><input type="text">
         </div>
       </li>
     </ul>
-
-    <!--
-    <p class="user"><strong>{{ user1 }}</strong> {{ fecha }}</p>
-    <p class="comment">{{ comment1 }}</p>
-    <p class="user"><strong>{{ user2 }}</strong> {{ fecha }}</p>
-    <p class="comment">{{ comment2 }}</p>
-    <p class="user"><strong>{{ user3 }}</strong> {{ fecha }}</p>
-    <p class="comment">{{ comment3 }}</p>
-    -->
-
-    <hr class="mt-5" />
-
   </div>
+
+    <div class="col-md-6">
+        <p>Hola</p>
+      <ul>
+        <li *ngFor="let day of Today" class="mb-2">
+          <p>{{ dat.can }} x {{ day.name }} </p>
+        </li>
+      </ul>
+  </div>
+</div>
 </div>
